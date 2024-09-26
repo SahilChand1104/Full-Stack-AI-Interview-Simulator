@@ -9,7 +9,7 @@ export default function Page() {
     <aside className="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
       <img
         alt=""
-        src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        src="https://blog.talview.com/hs-fs/hubfs/AI_V.png?width=842&name=AI_V.png"
         className="absolute inset-0 h-full w-full object-cover"
       />
     </aside>
@@ -34,11 +34,11 @@ export default function Page() {
         </a>
 
         <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-          Welcome to Squid 🦑
+          Hello!
         </h1>
 
         <p className="mt-4 leading-relaxed text-gray-500">
-          Hello is this working
+          Welcome to the Full Stack AI Interview Simulator
         </p>
 
         <SignIn />
