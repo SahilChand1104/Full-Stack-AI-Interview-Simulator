@@ -28,7 +28,7 @@ function Header() {
             `}>Upgrade</li>
             <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer
             ${path=='/dashboard/Information'&&'text-primary font-bold'}
-            `}>Information?</li>
+            `}>Information</li>
         </ul>
         <UserButton/>
     </div>
