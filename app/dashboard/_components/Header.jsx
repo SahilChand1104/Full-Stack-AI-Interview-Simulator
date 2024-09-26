@@ -8,10 +8,10 @@ function Header() {
     <div className='flex p-4 items-center justify-between bg-secondary shadow-md'>
         <Image src ={'/logo.svg'} width={160} height={100} alt ='logo'/>
         <ul className='flex gap-6'>
-            <li>Dashboard</li>
-            <li>Questions</li>
-            <li>Upgrade</li>
-            <li>How it works?</li>
+            <li className='hover:text-primary hover:font-bold transition-all cursor-pointer'>Dashboard</li>
+            <li className='hover:text-primary hover:font-bold transition-all cursor-pointer'>Questions</li>
+            <li className='hover:text-primary hover:font-bold transition-all cursor-pointer'>Upgrade</li>
+            <li className='hover:text-primary hover:font-bold transition-all cursor-pointer'>How it works?</li>
         </ul>
         <UserButton/>
     </div>
