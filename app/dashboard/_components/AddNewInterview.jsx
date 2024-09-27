@@ -8,6 +8,7 @@ import {
     DialogTitle,
     DialogTrigger,
   } from "@/components/ui/dialog"
+import { Button } from '@/components/ui/button'
   
 
 function AddNewInterview() {
@@ -27,6 +28,10 @@ function AddNewInterview() {
             <DialogDescription>
                 This action cannot be undone. This will permanently delete your account
                 and remove your data from our servers.
+                <div className='flex gap-5 justify-end'>
+                    <Button variant="ghost" onClick={()=>setOpenDialog(false)}>Cancel</Button>
+                    <Button>Start Interview</Button>
+                </div>
             </DialogDescription>
             </DialogHeader>
         </DialogContent>
