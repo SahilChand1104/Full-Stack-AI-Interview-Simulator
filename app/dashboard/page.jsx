@@ -3,10 +3,10 @@ import React from 'react'
 
 function Dashboard() {
   return (
-    <div>
+    <div className='p-10'>
 
-      <h2>Dashboard</h2>
-
+      <h2 className='font-bold text-2xl'>Dashboard</h2>
+      <h2>Create and Start the Interview Simulator</h2>
 
     </div>
   )
