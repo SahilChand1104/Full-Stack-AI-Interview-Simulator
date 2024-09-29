@@ -22,12 +22,12 @@ function AddNewInterview() {
         </div>
         <Dialog open={openDialog}>
 
-        <DialogContent>
+        <DialogContent className="max-w-2xl">
             <DialogHeader>
-            <DialogTitle>Are you absolutely sure?</DialogTitle>
+            <DialogTitle className="text-2xl">What kind of job are you interviewing for</DialogTitle>
             <DialogDescription>
                 <div>
-                  <h2 className='font-bold text-2xl'>What kind of job are you interviewing for?</h2>
+                  
                   <h2>Add details about the job position, job description and years of experience</h2>
                 </div>
                 <div className='flex gap-5 justify-end'>
