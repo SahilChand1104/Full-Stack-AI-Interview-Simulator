@@ -15,6 +15,16 @@ import { Textarea } from '@/components/ui/textarea'
 
 function AddNewInterview() {
     const [openDialog, setOpenDialog]=useState(false)
+    const [jobPosition, setJobPosition] = useState(false);
+    const [jobDescription, setJobDescription] = useState(false);
+    const [jobExperience, setJobExperience] = useState(false);
+
+    const onSubmit = (e)=>{
+      e.preventDefault()
+      console.log(jobPosition, jobDescription, jobExperience)
+    }
+
+
   return (
     <div>
         <div className='p-10 border rounded-lg bg-secondary hover:scale-105 hover:shadow-md cursor-pointer transition-all'
@@ -28,22 +38,22 @@ function AddNewInterview() {
             <DialogHeader>
             <DialogTitle className="text-2xl">What kind of job are you interviewing for</DialogTitle>
             <DialogDescription>
-              <form>
+              <form onSubmit ={onSubmit}>
                 <div>
                   
                   <h2>Add details about the job position, job description and years of experience</h2>
 
                   <div className='mt-7 my-3'>
                     <label>Job Position</label>
-                      <Input placeholder = "Ex. Software Engineer" required />
+                      <Input placeholder = "Ex. Software Engineer" required onChange={(event)=>setJobPosition(event.target.value)}/>
                   </div>
                   <div className='my-3'>
                     <label>Job Description</label>
-                      <Textarea placeholder = "Ex. Experience with Java, Python " required />
+                      <Textarea placeholder = "Ex. Experience with Java, Python " required onChange={(event)=>setJobDescription(event.target.value)} />
                   </div>
                   <div className=' my-3'>
                     <label>Years of Experience</label>
-                      <Input placeholder = "Ex. 2" type = "number" max="60" required/>
+                      <Input placeholder = "Ex. 2" type = "number" max="80" required onChange={(event)=>setJobExperience(event.target.value)}/>
                   </div>
                 </div>
                 <div className='flex gap-5 justify-end'>
