@@ -26,8 +26,10 @@ function AddNewInterview() {
             <DialogHeader>
             <DialogTitle>Are you absolutely sure?</DialogTitle>
             <DialogDescription>
-                This action cannot be undone. This will permanently delete your account
-                and remove your data from our servers.
+                <div>
+                  <h2 className='font-bold text-2xl'>What kind of job are you interviewing for?</h2>
+                  <h2>Add details about the job position, job description and years of experience</h2>
+                </div>
                 <div className='flex gap-5 justify-end'>
                     <Button variant="ghost" onClick={()=>setOpenDialog(false)}>Cancel</Button>
                     <Button>Start Interview</Button>
