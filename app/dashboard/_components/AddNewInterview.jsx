@@ -10,6 +10,7 @@ import {
   } from "@/components/ui/dialog"
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
   
 
 function AddNewInterview() {
@@ -31,9 +32,17 @@ function AddNewInterview() {
                   
                   <h2>Add details about the job position, job description and years of experience</h2>
 
-                  <div className='mt-7 my-2'>
+                  <div className='mt-7 my-3'>
                     <label>Job Position</label>
                       <Input placeholder = "Ex. Software Engineer" />
+                  </div>
+                  <div className='my-3'>
+                    <label>Job Description</label>
+                      <Textarea placeholder = "Ex. Experience with Java, Python" />
+                  </div>
+                  <div className=' my-3'>
+                    <label>Years of Experience</label>
+                      <Input placeholder = "2" type = "number" />
                   </div>
                 </div>
                 <div className='flex gap-5 justify-end'>
