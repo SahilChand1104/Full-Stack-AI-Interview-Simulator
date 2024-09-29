@@ -9,6 +9,7 @@ import {
     DialogTrigger,
   } from "@/components/ui/dialog"
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
   
 
 function AddNewInterview() {
@@ -29,6 +30,11 @@ function AddNewInterview() {
                 <div>
                   
                   <h2>Add details about the job position, job description and years of experience</h2>
+
+                  <div className='mt-7 my-2'>
+                    <label>Job Position</label>
+                      <Input placeholder = "Ex. Software Engineer" />
+                  </div>
                 </div>
                 <div className='flex gap-5 justify-end'>
                     <Button variant="ghost" onClick={()=>setOpenDialog(false)}>Cancel</Button>
