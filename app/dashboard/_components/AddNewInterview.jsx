@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { chatSession } from '@/utils/GeminiAIModel'
+import { LoaderCircle } from 'lucide-react'
   
 
 function AddNewInterview() {
@@ -19,16 +20,19 @@ function AddNewInterview() {
     const [jobPosition, setJobPosition] = useState(false);
     const [jobDescription, setJobDescription] = useState(false);
     const [jobExperience, setJobExperience] = useState(false);
+    const [Loading, setLoading] = useState(false);
 
     const onSubmit = async(e)=>{
+      setLoading(true)
       e.preventDefault()
       console.log(jobPosition, jobDescription, jobExperience);
 
       const InputPrompt = "Job Position: "+jobPosition+", Job Description: "+jobDescription+", Years of Experience: "+jobExperience+", Depends on Job Position, Job Description and Years of Experience give us "+process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT+" Interview Questions along with Answer in JSON format, Give us questions and answer field in JSON "
 
       const result = await chatSession.sendMessage(InputPrompt);
-
-      console.log(result.response.text());
+      const MockJsonResp = (result.response.text()).replace('```json', '').replace('```', '');
+      console.log(JSON.parse(MockJsonResp));
+      setLoading(false);
     }
 
 
@@ -65,7 +69,12 @@ function AddNewInterview() {
                 </div>
                 <div className='flex gap-5 justify-end'>
                     <Button type = "button" variant="ghost" onClick={()=>setOpenDialog(false)}>Cancel</Button>
-                    <Button type = "submit">Start Interview</Button>
+                    <Button type = "submit" disabled={Loading}>
+                      {Loading?
+                      <>
+                      <LoaderCircle className='animate-spin'/> 'Generating from AI'</>: 'Start Interview'
+                    }
+                      </Button>
                 </div>
                 </form>
             </DialogDescription>
