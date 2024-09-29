@@ -35,20 +35,20 @@ function AddNewInterview() {
 
                   <div className='mt-7 my-3'>
                     <label>Job Position</label>
-                      <Input placeholder = "Ex. Software Engineer" />
+                      <Input placeholder = "Ex. Software Engineer" required />
                   </div>
                   <div className='my-3'>
                     <label>Job Description</label>
-                      <Textarea placeholder = "Ex. Experience with Java, Python" />
+                      <Textarea placeholder = "Ex. Experience with Java, Python " required />
                   </div>
                   <div className=' my-3'>
                     <label>Years of Experience</label>
-                      <Input placeholder = "2" type = "number" />
+                      <Input placeholder = "Ex. 2" type = "number" max="60" required/>
                   </div>
                 </div>
                 <div className='flex gap-5 justify-end'>
                     <Button type = "button" variant="ghost" onClick={()=>setOpenDialog(false)}>Cancel</Button>
-                    <Button type = "button">Start Interview</Button>
+                    <Button type = "submit">Start Interview</Button>
                 </div>
                 </form>
             </DialogDescription>
