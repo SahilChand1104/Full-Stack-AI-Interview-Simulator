@@ -28,6 +28,7 @@ function AddNewInterview() {
             <DialogHeader>
             <DialogTitle className="text-2xl">What kind of job are you interviewing for</DialogTitle>
             <DialogDescription>
+              <form>
                 <div>
                   
                   <h2>Add details about the job position, job description and years of experience</h2>
@@ -46,9 +47,10 @@ function AddNewInterview() {
                   </div>
                 </div>
                 <div className='flex gap-5 justify-end'>
-                    <Button variant="ghost" onClick={()=>setOpenDialog(false)}>Cancel</Button>
-                    <Button>Start Interview</Button>
+                    <Button type = "button" variant="ghost" onClick={()=>setOpenDialog(false)}>Cancel</Button>
+                    <Button type = "button">Start Interview</Button>
                 </div>
+                </form>
             </DialogDescription>
             </DialogHeader>
         </DialogContent>
