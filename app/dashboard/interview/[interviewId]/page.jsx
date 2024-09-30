@@ -26,7 +26,7 @@ function Interview({params}) {
         setInterviewData(result[0]);
     }
   return (
-    <div className='my-10 flex justify-center flex-col items-center'>
+    <div className='my-10 '>
         <h2 className='font-bold text-2xl'>Let's Get Started</h2>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
@@ -62,8 +62,10 @@ function Interview({params}) {
         </div>
         </div>
 
-        
+        <div className='flex justify-end items-end'>
+        <Button>Start Interview</Button>
 
+        </div>
         
 
 
