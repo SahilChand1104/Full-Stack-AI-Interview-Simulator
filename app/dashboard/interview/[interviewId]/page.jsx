@@ -32,6 +32,7 @@ function Interview({params}) {
         {webCamEnabled? <Webcam
         onUserMedia={()=>setWebCamEnabled(true)}
         onUserMediaError={()=>setWebCamEnabled(false)}
+        mirrored={true}
         style={{
           height:300,
           width:300
@@ -45,6 +46,12 @@ function Interview({params}) {
         }
 
         </div>
+
+        <div className='flex flex-col my-5'>
+          <h2 className='text-lg'><strong>Job Position:</strong>{interviewData.jobPosition}</h2>
+        </div>
+
+
     </div>
   )
 }
