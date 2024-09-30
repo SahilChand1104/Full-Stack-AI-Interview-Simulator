@@ -3,6 +3,7 @@ import { db } from '@/utils/db'
 import { MockInterview } from '@/utils/schema'
 import { eq } from 'drizzle-orm'
 import React, { useEffect, useState } from 'react'
+import Webcam from 'react-webcam'
 
 function Interview({params}) {
 
@@ -24,6 +25,9 @@ function Interview({params}) {
   return (
     <div className='my-10 flex justify-center flex-col items-center'>
         <h2 className='font-bold text-2xl'>Let's Get Started</h2>
+        <div>
+        <Webcam />
+        </div>
     </div>
   )
 }
