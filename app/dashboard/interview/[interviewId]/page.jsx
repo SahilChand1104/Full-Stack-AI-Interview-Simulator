@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { db } from '@/utils/db'
 import { MockInterview } from '@/utils/schema'
 import { eq } from 'drizzle-orm'
-import { WebcamIcon } from 'lucide-react'
+import { Lightbulb, WebcamIcon } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import Webcam from 'react-webcam'
 
@@ -28,6 +28,8 @@ function Interview({params}) {
   return (
     <div className='my-10 flex justify-center flex-col items-center'>
         <h2 className='font-bold text-2xl'>Let's Get Started</h2>
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
         <div>
         {webCamEnabled? <Webcam
         onUserMedia={()=>setWebCamEnabled(true)}
@@ -46,10 +48,23 @@ function Interview({params}) {
         }
 
         </div>
+        <div className='flex flex-col my-5 gap-5'>
+          <div className='flex flex-col my-5 gap-5 p-5 rounded-lg border'>
+          <h2 className='text-lg'><strong>Job Position:</strong>{interviewData?.jobPosition || 'Loading...'}</h2>
+          <h2 className='text-lg'><strong>Job Description:</strong>{interviewData?.jobDesc || 'Loading...'}</h2>
+          <h2 className='text-lg'><strong>Years of Experience:</strong>{interviewData?.jobExperience || 'Loading...'}</h2>
 
-        <div className='flex flex-col my-5'>
-          <h2 className='text-lg'><strong>Job Position:</strong>{interviewData.jobPosition}</h2>
+          </div>
+          <div className='p-5 border rounded-lg border-yellow-300 bg-yellow-300'>
+            <h2 className='flex gap-2 items-center'><Lightbulb/><strong>Information</strong></h2>
+            <h2>Please enable your camera and microphone to start the interview sim. It has 5 questions and you will respond verbally. At the end their will be feedback and a grading of your responses. Microphone is mandatory but camera is not.</h2>
+          </div>
         </div>
+        </div>
+
+        
+
+        
 
 
     </div>
