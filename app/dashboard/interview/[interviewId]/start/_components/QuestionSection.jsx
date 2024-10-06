@@ -3,7 +3,7 @@ import React from 'react'
 function QuestionSection({mockInterviewQuestion}) {
   return (
     <div className ='p-5 border rounded-lg'>
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
             {mockInterviewQuestion&&mockInterviewQuestion.map((question,index)=>(
                 <h2 className='p-2 bg-secondary rounded-full'>Question #{index+1}</h2>
             ))}
