@@ -1,5 +1,5 @@
 Full Stack AI Interview Simulator
-Technologies Used: Next.js, Node.js, PostgreSQL, TailwindCSS, ShadCN
+Technologies Used: Next.js, Node.js, PostgreSQL, TailwindCSS, ShadCN, Clerk, React, Drizzle ORM
 
 Description:
 This project is a full-stack AI-powered interview simulator that helps users practice for job interviews. The system uses the Gemini AI API to generate job-specific interview questions, which reduces the preparation time by 90%. Users can answer questions using speech, and their responses are transcribed with a 95% accuracy rate. The system also stores the responses in a PostgreSQL database, allowing users to review and redo interviews.
