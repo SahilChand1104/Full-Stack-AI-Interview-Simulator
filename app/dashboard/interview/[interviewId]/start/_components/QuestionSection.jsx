@@ -16,6 +16,7 @@ function QuestionSection({mockInterviewQuestion, activeQuestionIndex}) {
             <Lightbulb />
             <strong>Note:</strong>
           </h2>
+          <h2>{process.env.NEXT_PUBLIC_QUESTION_NOTE}</h2>
         </div>
 
     </div>
