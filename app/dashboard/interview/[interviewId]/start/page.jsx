@@ -9,6 +9,7 @@ function StartInterview({params}) {
 
     const [interviewData, setInterviewData]=useState();
     const [mockInterviewQuestion, setMockInterviewQuestion]=useState();
+    const[activeQuestionIndex, setActiveQuestionIndex]=useState(0);
     useEffect(()=>{
         GetInterviewDetails();
 
@@ -30,7 +31,11 @@ function StartInterview({params}) {
   return (
     <div>
         <div className='grid grid-cols-1 md:grid-cols-2'>
-            <QuestionSection mockInterviewQuestion={mockInterviewQuestion} />
+            <QuestionSection 
+            mockInterviewQuestion={mockInterviewQuestion}
+            activeQuestionIndex={activeQuestionIndex}
+            
+            />
 
         </div>
 
