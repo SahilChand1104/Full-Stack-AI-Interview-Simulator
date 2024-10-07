@@ -10,7 +10,7 @@ function QuestionSection({mockInterviewQuestion, activeQuestionIndex}) {
 
             
         </div>
-        <h2>{mockInterviewQuestion[activeQuestionIndex]?.question}</h2>
+        <h2 className='my-5 text-md md:text-lg'>{mockInterviewQuestion[activeQuestionIndex]?.question}</h2>
     </div>
   )
 }
