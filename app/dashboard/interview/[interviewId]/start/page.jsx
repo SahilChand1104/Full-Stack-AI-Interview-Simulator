@@ -4,6 +4,7 @@ import { MockInterview } from '@/utils/schema';
 import { eq } from 'drizzle-orm';
 import React, { useEffect, useState } from 'react'
 import QuestionSection from './_components/QuestionSection';
+import RecordAnswerSection from './_components/RecordAnswerSection';
 
 function StartInterview({params}) {
 
@@ -37,6 +38,7 @@ function StartInterview({params}) {
             
             />
 
+            <RecordAnswerSection/>
         </div>
 
     </div>
