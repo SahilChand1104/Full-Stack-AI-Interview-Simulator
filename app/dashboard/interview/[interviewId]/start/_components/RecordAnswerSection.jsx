@@ -5,8 +5,8 @@ import Webcam from 'react-webcam'
 
 function RecordAnswerSection() {
   return (
-    <div>
-        <div className='flex flex-col my-20 justify-center items-center bg-orange rounded-lg p-5'>
+    <div className='flex items-center justify-center flex-col'>
+        <div className='flex flex-col mt-20 justify-center items-center bg-orange rounded-lg p-5'>
             <Image src={'/webcam.png'} width ={200} height={200}
             className='absolute' />
             <Webcam
@@ -20,7 +20,7 @@ function RecordAnswerSection() {
 
             
         </div>
-        <Button>Record Answer</Button>
+        <Button className='my-10'>Record Answer</Button>
     </div>
   )
 }
