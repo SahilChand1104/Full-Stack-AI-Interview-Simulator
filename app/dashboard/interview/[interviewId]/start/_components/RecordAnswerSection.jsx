@@ -48,8 +48,8 @@ function RecordAnswerSection() {
         onClick={isRecording?stopSpeechToText:startSpeechToText}
         >
           {isRecording?
-          <h2 className='text-red-800'>
-            <Mic/> 'Recording..'
+          <h2 className='text-red-800 flex gap-2'>
+            <Mic/> Stop Recording
           </h2>
           :
         
