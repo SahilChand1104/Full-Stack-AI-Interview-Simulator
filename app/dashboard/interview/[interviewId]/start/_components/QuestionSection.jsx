@@ -20,7 +20,7 @@ function QuestionSection({mockInterviewQuestion, activeQuestionIndex}) {
             ))}
         </div>
         <h2 className='my-5 text-md md:text-lg'>{mockInterviewQuestion[activeQuestionIndex]?.question}</h2>
-        <Volume2Icon onClick={()=>textToSpeech(mockInterviewQuestion[activeQuestionIndex]?.question)} />
+        <Volume2Icon className='cursor-pointer' onClick={()=>textToSpeech(mockInterviewQuestion[activeQuestionIndex]?.question)} />
 
         <div className='border rounded-lg p-5 bg-red-100 mt-20'>
           <h2 className ='flex gap-2 items-center text-red-800'>
