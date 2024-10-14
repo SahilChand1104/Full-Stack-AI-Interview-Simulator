@@ -2,11 +2,12 @@
 import { Button } from '@/components/ui/button'
 import { Mic } from 'lucide-react'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import useSpeechToText from 'react-hook-speech-to-text'
 import Webcam from 'react-webcam'
 
 function RecordAnswerSection() {
+  const [userAnswer, setUserAnswer] = useState('');
     const {
         error,
         interimResult,
@@ -18,6 +19,13 @@ function RecordAnswerSection() {
         continuous: true,
         useLegacyResults: false
       });
+
+
+      useEffect(()=>{
+        results.map((result)=>(
+          setUserAnswer(prevAns=>prevAns+result?.transcript)
+        ))
+      },[results])
 
 
   return (
@@ -36,16 +44,18 @@ function RecordAnswerSection() {
 
             
         </div>
-        <Button className='my-10'>
+        <Button className='my-10'
+        onClick={isRecording?stopSpeechToText:startSpeechToText}
+        >
           {isRecording?
-          <h2>
+          <h2 className='text-red-800'>
             <Mic/> 'Recording..'
           </h2>
           :
         
           'Record Answer'}</Button>
 
-        
+        <Button onClick={()=>console.log(userAnswer)}>Show User Answer</Button>
     </div>
   )
 }
